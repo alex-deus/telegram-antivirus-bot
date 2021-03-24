@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "back"
+version = "1.0.0"
+description = "Telegram chat bot for checking files from channels by Clamv antivirus"
+authors = ["alex-deus"]
+
+[tool.poetry.dependencies]
+python = "3.9.0"
+aiogram = "^2.11.2"
+motor = "^2.3.1"
+aiotg = "^1.0.0"
+httpx = "^0.17.0"
+aiofile = "^3.5.0"
+ujson = "^4.0.2"
+pydantic = "^1.8.1"
+coloredlogs = "^15.0"
+
+[tool.poetry.dev-dependencies]
+bandit = "^1.7.0"
+black = "^20.8b1"
+isort = "^5.7.0"
+django-dynamic-fixture = "^3.1.1"
+requests-mock = "^1.8.0"
+pre-commit = "^2.10.1"
+autoflake = "^1.4"
+seed-isort-config = "^2.2.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+py_version = 39
+line_length = 120
+multi_line_output = 3
+include_trailing_comma = true
+sections = "STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+known_first_party = "application"
+
+[tool.black]
+line-length = 120
+exclude = '''
+/(
+  \.git
+  | tmp/
+  | data/
+)/
+'''
+
+git config user.email "aleksei-deus@protonmail.com"
